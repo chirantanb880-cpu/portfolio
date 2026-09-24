@@ -13,7 +13,7 @@ const collegeTimeImageNames = [
     "C_053.jpg", "C_054.1.jpg", "C_054.jpg", "C_055.jpg", "C_056.jpg", "C_057.jpg", "C_058.jpg", "C_059.jpg", "C_060.jpg", "C_061.jpg",
     "C_062.jpg", "C_063.jpg",
     "D_001.jpg", "D_002.jpg", "D_003.jpg", "D_004.jpg", "D_005.jpg", "D_006.jpg", "D_007.jpg", "D_008.jpg", "D_009.jpg", "D_010.jpg",
-    "D_011.jpg", "D_012.jpg", "D_013.jpg", "D_014.jpg", "D_015.jpg", "D_016.jpg", "D_017.jpg", "D_018.jpg"
+    "D_011.jpg", "D_012.jpg", "D_013.jpg", "D_014.jpg", "D_015.jpg", "D_016.jpg"
 ];
 const collegeTimeGallery = document.querySelector(".college-time-gallery");
 const collegeTimeImagePath = (name) => `My all works/${name}`;
