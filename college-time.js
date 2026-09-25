@@ -2,7 +2,7 @@ const collegeTimeImageNames = [
     "A_001.jpg", "A_002.jpg", "A_003.jpg", "A_004.jpg", "A_005.jpg", "A_006.jpg", "A_007.jpg", "A_008.jpg", "A_009.jpg", "A_010.jpg",
     "A_011.jpg", "A_012.jpg", "A_013.jpg", "A_014.jpg", "A_015.jpg", "A_0016.jpg", "A_017.jpg", "A_018.jpg", "A_019.jpg", "A_020.jpg",
     "A_021.jpg", "A_022.jpg", "A_023.jpg", "A_024.jpg", "A_025.jpg", "A_026.jpg", "A_027.jpg", "A_028.jpg", "A_029.jpg", "A_030.jpg",
-    "A_031.jpg", "A_032.jpg", "A_033.jpg", "A_034.jpg", "A_035.jpg", "A_036.jpg", "A_037.jpg",
+    "A_031.jpg", "A_032.jpg", "A_034.jpg", "A_035.jpg", "A_036.jpg", "A_037.jpg",
     "B_001.jpg", "B_002.jpg", "B_003.jpg", "B_004.jpg", "B_005.jpg", "B_006.jpg", "B_007.jpg", "B_008.jpg", "B_009.jpg", "B_010.jpg",
     "B_011.jpg", "B_012.jpg", "B_013.jpg", "B_014.jpg", "B_015.jpg", "B_016.jpg", "B_017.jpg", "B_018.jpg", "B_019.jpg", "B_020.jpg",
     "C_001.jpg", "C_002.jpg", "C_003.png", "C_004.png", "C_005.png", "C_006.png", "C_007.png", "C_008.png", "C_009.png", "C_010.png",
@@ -17,8 +17,9 @@ const collegeTimeImageNames = [
 ];
 const collegeTimeGallery = document.querySelector(".college-time-gallery");
 const collegeTimeImagePath = (name) => `My all works/${name}`;
+const collegeTimeExcludedImages = new Set(["A_033.jpg"]);
 
-collegeTimeImageNames.forEach((name, index) => {
+collegeTimeImageNames.filter((name) => !collegeTimeExcludedImages.has(name)).forEach((name, index) => {
     const box = document.createElement("button");
     box.className = "college-time-box";
     box.type = "button";
