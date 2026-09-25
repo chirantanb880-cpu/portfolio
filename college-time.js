@@ -18,8 +18,12 @@ const collegeTimeImageNames = [
 const collegeTimeGallery = document.querySelector(".college-time-gallery");
 const collegeTimeImagePath = (name) => `My all works/${name}`;
 const collegeTimeExcludedImages = new Set(["A_033.jpg"]);
+const collegeTimeDisplayOrder = ["D", "C", "B", "A"];
+const collegeTimeOrderedImageNames = collegeTimeDisplayOrder.flatMap((prefix) =>
+    collegeTimeImageNames.filter((name) => name.startsWith(`${prefix}_`))
+);
 
-collegeTimeImageNames.filter((name) => !collegeTimeExcludedImages.has(name)).forEach((name, index) => {
+collegeTimeOrderedImageNames.filter((name) => !collegeTimeExcludedImages.has(name)).forEach((name, index) => {
     const box = document.createElement("button");
     box.className = "college-time-box";
     box.type = "button";
